@@ -1,15 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+
+    <a href="/posts" class="btn btn-primary text-light">Go Back</a>
+
     <h1>{{$post->title}}</h1>
-    <div class="card text-dark">
+    
         
-        <p><h5>{{$post->body}}</h3></p>
+    <p><h5>{{$post->body}}</h3></p>
                     
     
     <hr>
-    <small class="text-dark">Written on {{$post->created_at}}</small>
+    <small>Written on {{$post->created_at}}</small>
 
-    </div>
+    
 
 @endsection
