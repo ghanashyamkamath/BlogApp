@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+
+use DB;
+
+
 class PostsController extends Controller
 {
     // index
@@ -24,7 +28,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts = Post::all();
+        // $posts = Post::orderBy('title','desc')->get();
+
+        //if using use DB; then follow the code below
+        $posts = DB::select('SELECT * FRom posts');
         return view('posts.index')->with('posts',$posts);
     }
 
