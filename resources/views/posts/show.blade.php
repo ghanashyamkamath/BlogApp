@@ -5,6 +5,14 @@
     <a href="/posts" class="btn btn-primary text-light">Go Back</a>
     <br><br>
     <h1>{{$post->title}}</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}" alt="">
+        </div>
+    </div>
+    
+    <br><br>
+    
     
         
     <p><h5>{{$post->body}}</h3></p>
